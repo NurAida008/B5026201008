@@ -42,7 +42,7 @@
     <div class="container mt-3">
         <div class="box">
             <div class="col-3">Nur Aida Febrianti <br> Aida <br>5026201008</div>
-        <h2 class="mb-3 text-center">Form Pendaftaran Kuota Internet</h2>
+        <h2 class="mb-3 text-center">Form Pendaftaran Kuota Internet Masa Pandemi</h2>
         <form action="https://www.its.ac.id/id/beranda/" onsubmit="return requirement()">
             <!--Nama Mahasiswa-->
             <div class="row mb-3">
