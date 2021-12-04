@@ -4,7 +4,7 @@
 
 	@section('container')
     <br>
-    <a href="/absen" class="btn btn-primary"> Kembali</a>
+    <a href="/absen"  class="btn btn-secondary"> Kembali</a>
 
 
 	@foreach($absen as $p)
@@ -35,7 +35,7 @@
             <label for="tidak">TIDAK HADIR</label><br>
         </div>
         <div class="text-center">
-		<input class="btn btn-primary" type="submit" value="Simpan Data">
+		<input type="submit" value="Simpan Data" class="btn btn-warning mb-5">
         </div>
 	</form>
 	@endforeach

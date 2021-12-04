@@ -56,10 +56,12 @@
     <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
       <div class="position-sticky pt-3">
         <div class="img bg-wrap text-center py-4" >
-            <img src="{{URL::asset('poto.PNG')}}" class="img-fluid rounded-circle mt-1" alt="profile Pic" width="50%">
+            <img src="{{URL::asset('poto.PNG')}}" class="img-fluid rounded-circle mt-1" alt="profile Pic" width="70%">
+            <br><br>
             <h5>Nur Aida Febrianti</h5>
             <h6 >5026201008</h6>
             </div>
+
         <ul class="nav flex-column">
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="/pegawai">
@@ -81,20 +83,20 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="/mutasi">
+            <a class="nav-link" href="/tugas">
               <span data-feather="shopping-cart"></span>
               Tugas Minggu Depan
             </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="/mutasi">
+            <a class="nav-link" href="/eas">
               <span data-feather="shopping-cart"></span>
               EAS
             </a>
           </li>
 
-          <li class="nav-item" style="margin-top: 230px">
+          <li class="nav-item" style="margin-top: 80px">
             <a class="nav-link" href="/mutasi">
               <span data-feather="shopping-cart"></span>
               Copyright &copy;
@@ -106,12 +108,6 @@
             </a>
           </li>
         </ul>
-        <div class="footer" style="font-family:Arial, Helvetica, sans-serif; margin-top: 100px" >
-            <p>
-
-            </p>
-          </div>
-
       </div>
     </nav>
 
