@@ -80,6 +80,20 @@
             </a>
           </li>
 
+          <li class="nav-item">
+            <a class="nav-link" href="/mutasi">
+              <span data-feather="shopping-cart"></span>
+              Tugas Minggu Depan
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/mutasi">
+              <span data-feather="shopping-cart"></span>
+              EAS
+            </a>
+          </li>
+
           <li class="nav-item" style="margin-top: 230px">
             <a class="nav-link" href="/mutasi">
               <span data-feather="shopping-cart"></span>
