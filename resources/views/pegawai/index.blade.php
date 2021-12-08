@@ -9,6 +9,13 @@
 	<br/>
 
 	<table class="table table-striped">
+        <p>Cari Data Pegawai berdasarkan nama</p>
+	<form action="/pegawai/cari" method="GET">
+		<input type="text" name="cari" placeholder="Cari Pegawai .." value="{{ old('cari') }}"  class="form-control">
+		<input type="submit" value="CARI" class="btn btn-warning">
+        <br>
+	</form>
+    <br>
 		<tr>
 			<th>Nama</th>
 			<th>Jabatan</th>
@@ -30,5 +37,7 @@
 		</tr>
 		@endforeach
 	</table>
+
+{{$pegawai-> links()}}
 
     @endsection

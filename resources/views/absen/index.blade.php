@@ -5,7 +5,7 @@
 	@section('container')
 
     <br>
-	<a href="/absen/tambah"  class="btn btn-secondary"> + Tambah Absen Baru</a>
+	<a href="/absen/tambah" class="btn btn-warning" > + Tambah Absen Baru</a>
 
 	<br/>
 	<br/>
@@ -30,4 +30,6 @@
 		</tr>
 		@endforeach
 	</table>
+    {{ $a->pegawai_nama }}
+    {{$absen-> links()}}
     @endsection

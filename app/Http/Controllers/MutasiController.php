@@ -15,7 +15,8 @@ class MutasiController extends Controller
     public function index()
     {
 
-		$mutasi = DB::table('mutasi')->get();
+		//$mutasi = DB::table('mutasi')->get();
+        $mutasi = DB::table('mutasi')->paginate(5) ;
 
 
 		return view('mutasi.index',['mutasi' => $mutasi]);

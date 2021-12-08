@@ -3,7 +3,7 @@
 
 
 	@section('container')
-    <a href="/pegawai"  class="btn btn-secondary"> Kembali</a>
+    <a href="/pegawai"   class="btn btn-secondary" class="btn btn-secondary" class="btn btn-secondary" class="btn btn-secondary"> Kembali</a>
 
 	<br/>
 	<br/>

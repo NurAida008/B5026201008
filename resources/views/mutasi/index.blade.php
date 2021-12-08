@@ -33,5 +33,6 @@
 		</tr>
 		@endforeach
 	</table>
+    {{$mutasi-> links()}}
 
 @endsection
