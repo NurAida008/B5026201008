@@ -26,50 +26,48 @@ public function tambah()
 	return view('meja.tambah', ['meja' => $meja]);
 
 }
-// method untuk insert data ke table pegawai
+// method untuk insert data ke table meja
 public function store(Request $request)
     {
         //DB::table()->insert();
-        // insert data ke table pegawai
-        DB::table('absen')->insert([
-            'IDPegawai' => $request->IDPegawai,
-            'Tanggal' => $request->tanggal,
-            'Status' => $request->status
+        // insert data ke table meja
+        DB::table('meja')->insert([
+            'merkmeja' => $request->merk,
+            'stockmeja' => $request->stock,
+            'tersedia' => $request->tersedia
         ]);
-        // alihkan halaman ke halaman pegawai
-        return redirect('/absen');
+        // alihkan halaman ke halaman meja
+        return redirect('/meja');
     }
-    // method untuk edit data pegawai
+    // method untuk edit data meja
 public function edit($id)
 {
-	// mengambil data pegawai berdasarkan id yang dipilih
-	$absen = DB::table('absen')->where('ID',$id)->get();
+	// mengambil data meja berdasarkan id yang dipilih
+	$meja = DB::table('meja')->where('kodemeja',$id)->get();
 
-    $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get();
-
-
-	// passing data pegawai yang didapat ke view edit.blade.php
-	return view('absen.edit',['absen' => $absen,'pegawai' => $pegawai]);
+	// passing data meja yang didapat ke view edit.blade.php
+	return view('meja.edit',['meja' => $meja ]);
 }
-// update data pegawai
+// update data meja
 public function update(Request $request)
 {
-	// update data pegawai
-	DB::table('absen')->where('ID',$request->id)->update([
-            'IDPegawai' => $request->IDPegawai,
-            'Tanggal' => $request->tanggal,
-            'Status' => $request->status
+	// update data meja
+	DB::table('meja')->where('kodemeja',$request->id)->update([
+            'merkmeja' => $request->merk,
+            'stockmeja' => $request->stock,
+            'tersedia' => $request->tersedia,
+
 	]);
-	// alihkan halaman ke halaman pegawai
-	return redirect('/absen');
+	// alihkan halaman ke halaman meja
+	return redirect('/meja');
 }
-// method untuk hapus data pegawai
+// method untuk hapus data meja
 public function hapus($id)
 {
-	// menghapus data pegawai berdasarkan id yang dipilih
-	DB::table('absen')->where('ID',$id)->delete();
+	// menghapus data meja berdasarkan id yang dipilih
+	DB::table('meja')->where('kodemeja',$id)->delete();
 
 	// alihkan halaman ke halaman pegawai
-	return redirect('/absen');
+	return redirect('/meja');
 }
 }

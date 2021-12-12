@@ -19,7 +19,7 @@
 		</tr>
 		@foreach($absen as $p)
 		<tr>
-			<td>{{ $p->IDPegawai }}</td>
+			<td>{{ $p->pegawai_nama }}</td>
 			<td>{{ $p->Tanggal }}</td>
 			<td>{{ $p->Status }}</td>
 			<td>

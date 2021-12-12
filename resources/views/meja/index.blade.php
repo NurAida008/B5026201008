@@ -21,6 +21,7 @@
         <th>Merk</th>
         <th>Stok</th>
         <th>Tersedia</th>
+        <th>Opsi</th>
     </tr>
     @foreach($meja as $p)
     <tr>
