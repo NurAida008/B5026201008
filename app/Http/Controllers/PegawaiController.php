@@ -98,7 +98,7 @@ public function cari(Request $request)
     ->paginate();
 
         // mengirim data pegawai ke view index
-    return view('index',['pegawai.index' => $pegawai]);
+    return view('pegawai.index',['pegawai' => $pegawai]);
 
 }
 }

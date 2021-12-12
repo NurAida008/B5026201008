@@ -83,9 +83,9 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="/tugas">
+            <a class="nav-link" href="/meja">
               <span data-feather="shopping-cart"></span>
-              Tugas Minggu Depan
+              Meja
             </a>
           </li>
 

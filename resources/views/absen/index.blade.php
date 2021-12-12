@@ -30,6 +30,5 @@
 		</tr>
 		@endforeach
 	</table>
-    {{ $a->pegawai_nama }}
     {{$absen-> links()}}
     @endsection

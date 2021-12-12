@@ -66,3 +66,11 @@ Route::post('/absen/store','AbsenController@store');
 Route::get('/absen/edit/{id}','AbsenController@edit');
 Route::post('/absen/update','AbsenController@update');
 Route::get('/absen/hapus/{id}','AbsenController@hapus');
+
+//route CRUD
+Route::get('/meja','MejaController@index');
+Route::get('/meja/tambah','MejaController@tambah');
+Route::post('/meja/store','MejaController@store');
+Route::get('/meja/edit/{ID}','MejaController@edit');
+Route::post('/meja/update','MejaController@update');
+Route::get('/meja/delete/{ID}','MejaController@delete');

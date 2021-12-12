@@ -14,10 +14,17 @@ class MutasiController extends Controller
      */
     public function index()
     {
-
-		//$mutasi = DB::table('mutasi')->get();
-        $mutasi = DB::table('mutasi')->paginate(5) ;
-
+        // $tugas = DB::table('tugas')
+        // ->join('pegawai', 'tugas.IDTugas', '=', 'pegawai.pegawai_id')
+        // ->select('tugas.*', 'pegawai.pegawai_nama')
+        // ->paginate(3);
+    	// return view('tugas.index',['tugas' => $tugas]);
+		// $mutasi = DB::table('mutasi')->get();
+        // $mutasi = DB::table('mutasi')->paginate(5) ;
+        $mutasi = DB::table('mutasi')
+        ->join('pegawai', 'mutasi.IDPegawai', '=', 'pegawai.pegawai_id')
+        ->select('mutasi.*', 'pegawai.pegawai_nama')
+        ->paginate(3);
 
 		return view('mutasi.index',['mutasi' => $mutasi]);
     }
