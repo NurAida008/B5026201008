@@ -49,19 +49,28 @@ public function edit($id)
 	return view('meja.edit',['meja' => $meja ]);
 }
 // update data meja
-public function update(Request $request)
-{
-	// update data meja
-	DB::table('meja')->where('kodemeja',$request->id)->update([
-            'merkmeja' => $request->merk,
-            'stockmeja' => $request->stock,
-            'tersedia' => $request->tersedia,
+// public function update(Request $request)
+// {
+// 	// update data meja
+// 	DB::table('meja')->where('kodemeja',$request->id)->update([
+//             'merkmeja' => $request->merk,
+//             'stockmeja' => $request->stock,
+//             'tersedia' => $request->tersedia,
 
+// 	]);
+// 	// alihkan halaman ke halaman meja
+// 	return redirect('/meja');
+// }
+// // method untuk hapus data meja
+public function update(Request $request){
+	DB::table('meja')->where('kodemeja',$request->id)->update([
+        'merkmeja' => $request->merk,
+		'stockmeja' => $request->stock,
+		'tersedia' => $request->tersedia,
 	]);
-	// alihkan halaman ke halaman meja
 	return redirect('/meja');
-}
-// method untuk hapus data meja
+    }
+
 public function hapus($id)
 {
 	// menghapus data meja berdasarkan id yang dipilih
@@ -70,4 +79,14 @@ public function hapus($id)
 	// alihkan halaman ke halaman pegawai
 	return redirect('/meja');
 }
+
+public function cari(Request $request)
+	{
+		$cari = $request->cari;
+		$meja = DB::table('meja')
+		->where('merkmeja','like',"%".$cari."%")
+		->paginate();
+		return view('meja.index',['meja' => $meja]);
+	}
+
 }

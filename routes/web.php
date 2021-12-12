@@ -50,9 +50,9 @@ Route::get('/pegawai/detail/{id}','PegawaiController@view');
 Route::get('/mutasi','MutasiController@index');
 Route::get('/mutasi/tambah','MutasiController@tambah');
 Route::post('/mutasi/store','MutasiController@store');
-Route::get('/mutasi/edit/{ID}','MutasiController@edit');
+Route::get('/mutasi/edit/{id}','MutasiController@edit');
 Route::post('/mutasi/update','MutasiController@update');
-Route::get('/mutasi/delete/{ID}','MutasiController@delete');
+Route::get('/mutasi/delete/{id}','MutasiController@delete');
 
 Route:: get('home', function(){
     return view('websitepweb.website');
@@ -71,6 +71,7 @@ Route::get('/absen/hapus/{id}','AbsenController@hapus');
 Route::get('/meja','MejaController@index');
 Route::get('/meja/tambah','MejaController@tambah');
 Route::post('/meja/store','MejaController@store');
-Route::get('/meja/edit/{ID}','MejaController@edit');
+Route::get('/meja/edit/{id}','MejaController@edit');
 Route::post('/meja/update','MejaController@update');
-Route::get('/meja/delete/{ID}','MejaController@delete');
+Route::get('/meja/hapus/{id}','MejaController@hapus');
+Route::get('/meja/cari','MejaController@cari');

@@ -14,10 +14,7 @@ class MutasiController extends Controller
      */
     public function index()
     {
-        // $tugas = DB::table('tugas')
-        // ->join('pegawai', 'tugas.IDTugas', '=', 'pegawai.pegawai_id')
-        // ->select('tugas.*', 'pegawai.pegawai_nama')
-        // ->paginate(3);
+
     	// return view('tugas.index',['tugas' => $tugas]);
 		// $mutasi = DB::table('mutasi')->get();
         // $mutasi = DB::table('mutasi')->paginate(5) ;
@@ -25,8 +22,7 @@ class MutasiController extends Controller
         ->join('pegawai', 'mutasi.IDPegawai', '=', 'pegawai.pegawai_id')
         ->select('mutasi.*', 'pegawai.pegawai_nama')
         ->paginate(3);
-
-		return view('mutasi.index',['mutasi' => $mutasi]);
+    	return view('mutasi.index',['mutasi' => $mutasi]);
     }
 
     /**
@@ -36,7 +32,9 @@ class MutasiController extends Controller
      */
     public function tambah()
     {
-        return view('mutasi.tambah');
+        $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get();
+
+        return view('mutasi.tambah', compact('pegawai'));
     }
 
     /**

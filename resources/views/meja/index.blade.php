@@ -34,8 +34,6 @@
             <a href="/meja/edit/{{ $p->kodemeja }}" class="btn btn-warning">Edit</a>
             <a href="/meja/hapus/{{ $p->kodemeja }}" class="btn btn-danger">Hapus</a>
 
-
-
         </td>
     </tr>
     @endforeach

@@ -17,6 +17,7 @@
 	</form>
     <br>
 		<tr>
+            <th>No</th>
 			<th>Nama</th>
 			<th>Jabatan</th>
 			<th>Umur</th>

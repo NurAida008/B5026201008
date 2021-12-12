@@ -11,8 +11,8 @@
 
 	<table class="table table-striped">
 		<tr>
-            <th>ID</th>
-			<th>IDPegawai</th>
+            <th>No</th>
+			<th>Nama Pegawai</th>
 			<th>Departemen</th>
 			<th>SubDepartemen</th>
 			<th>MulaiBertugas</th>
@@ -20,8 +20,8 @@
 		</tr>
 		@foreach($mutasi as $a)
 		<tr>
-            <td>{{ $a->ID}}</td>
-			<td>{{ $a->IDPegawai }}</td>
+            <td>{{ $loop->iteration }}</td>
+			<td>{{ $a->pegawai_nama }}</td>
 			<td>{{ $a->Departemen }}</td>
 			<td>{{ $a->SubDepartemen }}</td>
 			<td>{{ $a->MulaiBertugas }}</td>

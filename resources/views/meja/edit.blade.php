@@ -11,6 +11,7 @@
 	@foreach($meja as $p)
 	<form action="/meja/update" method="post">
 		{{ csrf_field() }}
+        <input type="hidden" name="id" value="{{ $p->kodemeja}}">
 		Merk <input type="text" required="required" name="merk" value="{{ $p->merkmeja }}" class="form-control"> <br/>
 		Stock <input type="text" required="required" name="stock" value="{{ $p->stockmeja }}" class="form-control"> <br/>
         Tersedia
