@@ -89,4 +89,14 @@ public function cari(Request $request)
 		return view('meja.index',['meja' => $meja]);
 	}
 
+    public function view($id)
+    {
+	// mengambil data meja berdasarkan id yang dipilih
+	$meja = DB::table('meja')->where('kodemeja',$id)->get();
+	// passing data meja yang didapat ke view edit.blade.php
+	return view('meja.detail',['meja' => $meja]);
+    }
+
 }
+
+

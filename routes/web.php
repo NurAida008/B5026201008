@@ -75,3 +75,4 @@ Route::get('/meja/edit/{id}','MejaController@edit');
 Route::post('/meja/update','MejaController@update');
 Route::get('/meja/hapus/{id}','MejaController@hapus');
 Route::get('/meja/cari','MejaController@cari');
+Route::get('/meja/detail/{id}','MejaController@view');
