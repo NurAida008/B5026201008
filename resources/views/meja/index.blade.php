@@ -19,7 +19,6 @@
     <tr>
         <th>No</th>
         <th>Merk</th>
-        <th>Stok</th>
         <th>Tersedia</th>
         <th>Opsi</th>
     </tr>
@@ -27,7 +26,7 @@
     <tr>
         <td>{{ $loop->iteration }}</td>
         <td>{{ $p->merkmeja }}</td>
-        <td>{{ $p->stockmeja }}</td>
+
         <td>{{ $p->tersedia }}</td>
 
         <td>
