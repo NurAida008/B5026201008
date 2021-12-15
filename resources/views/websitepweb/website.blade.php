@@ -107,25 +107,6 @@
 
       <h2>@yield('title')</h2>
       @yield('container')
-     {{-- <table>
-      <thead>
-        <tr>
-          <th scope="col">ID Tugas</th>
-          <th scope="col">Tanggal</th>
-          <th scope="col">Nama Tugas</th>
-          <th scope="col">Status</th>
-          <th scope="col">Action</th>
-        </tr>
-        <tr>
-          <td>tes</td>
-          <td>tes<td>
-          <td>tes</td>
-          <td></td>
-          <td>
-              <a class="btn btn-success" href="/task/edit/">Edit</a>
-              <a class="btn btn-danger" href="/task/hapus/">Hapus</a>
-          </td>
-     </table> --}}
     </main>
   </div>
 </div>

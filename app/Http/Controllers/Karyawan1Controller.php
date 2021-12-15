@@ -50,20 +50,6 @@ class Karyawan1Controller extends Controller
 	return view('karyawan1.detail',['karyawan1' => $karyawan1]);
     }
 
-	// update data karyawan1
-	public function update(Request $request)
-	{
-		// update data karyawan1
-		DB::table('karyawan1')->where('karyawan1_id',$request->id)->update([
-			'karyawan1_nama' => $request->nama,
-			'karyawan1_jabatan' => $request->jabatan,
-			'karyawan1_umur' => $request->umur,
-			'karyawan1_alamat' => $request->alamat
-		]);
-		// alihkan halaman ke halaman karyawan1
-		return redirect('/karyawan1');
-	}
-
 	// method untuk hapus data karyawan1
 	public function hapus($id)
 	{
