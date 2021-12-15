@@ -68,26 +68,11 @@ class Karyawan1Controller extends Controller
 	public function hapus($id)
 	{
 		// menghapus data karyawan1 berdasarkan id yang dipilih
-		DB::table('karyawan1')->where('karyawan1',$id)->delete();
+		DB::table('karyawan1')->where('NIP',$id)->delete();
 
 		// alihkan halaman ke halaman karyawan1
 		return redirect('/karyawan1');
 	}
 
 
-public function cari(Request $request)
-{
-    // menangkap data pencarian
-    $cari = $request->cari;
-
-        // mengambil data dari table karyawan1 sesuai pencarian data
-    $karyawan1 = DB::table('karyawan1')
-    ->where('karyawan1_nama','like',"%".$cari."%")
-    ->orWhere('karyawan1_alamat','like',"%".$cari."%")
-    ->paginate();
-
-        // mengirim data karyawan1 ke view index
-    return view('karyawan1.index',['karyawan1' => $karyawan1]);
-
-}
 }
