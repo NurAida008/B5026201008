@@ -90,9 +90,9 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="/eas">
+            <a class="nav-link" href="/karyawan1">
               <span data-feather="shopping-cart"></span>
-              EAS
+              Karyawan
             </a>
           </li>
 

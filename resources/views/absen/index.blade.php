@@ -23,6 +23,7 @@
 			<td>{{ $p->Tanggal }}</td>
 			<td>{{ $p->Status }}</td>
 			<td>
+
 				<a href="/absen/edit/{{ $p->ID }}" class="btn btn-warning" >Edit</a>
 				|
 				<a href="/absen/hapus/{{ $p->ID }}" class="btn btn-danger" >Hapus</a>
